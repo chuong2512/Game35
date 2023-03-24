@@ -7,10 +7,12 @@ using UnityEngine.Purchasing;
 
 public class Key
 {
-    public const string PACK1 = "robot_pack1";
-    public const string PACK2 = "robot_pack2";
-    public const string PACK3 = "robot_pack3";
-    public const string PACK4 = "robot_pack4";
+    public const string PACK1 = "game37_robot_pack1";
+    public const string PACK2 = "game37_robot_pack2";
+    public const string PACK3 = "game37_robot_pack3";
+    public const string PACK4 = "game37_robot_pack4";
+    public const string PACK5 = "game37_robot_pack5";
+    public const string PACK6 = "game37_robot_pack6";
 }
 
 public class IAPManager : PersistentSingleton<IAPManager>, IStoreListener
@@ -137,7 +139,6 @@ public class IAPManager : PersistentSingleton<IAPManager>, IStoreListener
 
     public void OnInitializeFailed(InitializationFailureReason error, string message)
     {
-        
     }
 
     public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs args)

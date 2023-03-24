@@ -7,19 +7,13 @@ using UnityEngine.UI;
 
 public class CanvasUI : Singleton<CanvasUI>
 {
-    public Image bg;
-    
     public Button start, exit;
 
-    public Button continueBut;
     // Start is called before the first frame update
     void Start()
     {
         start?.onClick.AddListener(NewGame);
         exit?.onClick.AddListener(ExitGame);
-        continueBut?.onClick.AddListener(ContinueGame);
-        
-        SetBG(GameDataManager.Instance.bg[GameDataManager.Instance.playerData.currentBG]);
     }
 
     private void ExitGame()
@@ -32,7 +26,6 @@ public class CanvasUI : Singleton<CanvasUI>
 
     public void NewGame()
     {
-        GameDataManager.Instance.ResetLevel();
         SceneManager.LoadScene("Game");
     }
 
@@ -44,10 +37,5 @@ public class CanvasUI : Singleton<CanvasUI>
     // Update is called once per frame
     void Update()
     {
-    }
-
-    public void SetBG(Sprite sprite)
-    {
-        bg.sprite = sprite;
     }
 }

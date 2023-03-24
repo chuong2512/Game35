@@ -19,9 +19,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-            
     }
-    
+
     //private void 
 
     public void CheckPassLevel()
@@ -31,9 +30,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        Debug.Log("pass");
-        GameDataManager.Instance.NextLevel();
-        SceneManager.LoadScene("Game");
+        GameUI.Instance.ShowWin();
     }
 
     public void Lose()
@@ -42,5 +39,4 @@ public class GameManager : MonoBehaviour
         GameController.Instance.SetState(StateGame.Pause);
         GameUI.Instance.ShowLose();
     }
-    
 }

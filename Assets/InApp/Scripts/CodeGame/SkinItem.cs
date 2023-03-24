@@ -7,34 +7,32 @@ using UnityEngine.UI;
 public class SkinItem : MonoBehaviour
 {
     private bool isUnlock;
-    
-    public GameObject lockObj;
-    public Image iconImage;
-    public TextMeshProUGUI state;
 
-    public void Init(Sprite sprite,bool isLock)
+    public GameObject lockObj;
+    public GameObject chooseObj;
+    public Image iconImage;
+
+
+    public void Init(Sprite sprite, bool isLock)
     {
-        
     }
 
     public void Choose()
     {
-        state.SetText("Choose");
+        chooseObj.SetActive(true);
     }
 
     public void UnChoose()
     {
-        if (isUnlock)
-        {
-            state.SetText("Select");
-        }
-        else
-            state.SetText("100 <sprite=0>");
+        chooseObj.SetActive(false);
+        
+        lockObj.SetActive(!isUnlock);
     }
 
     public void Unlock()
     {
         isUnlock = true;
+        chooseObj.SetActive(true);
         lockObj.SetActive(false);
     }
 }

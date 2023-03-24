@@ -49,15 +49,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 57e8abc56823a4e488d036657bb84658, type: 3}
   - {fileID: 21300000, guid: c2695bc0e85779b4aa81a74c27721595, type: 3}
   - {fileID: 21300000, guid: f3614e194f308c8418601547f0cb531d, type: 3}
-  - {fileID: 21300000, guid: 42b5df36b005baa40a40c871a9631be4, type: 3}
   - {fileID: 21300000, guid: 5fa1d9099c5f7664e9571f2f9f375f6d, type: 3}
+  - {fileID: 21300000, guid: 42b5df36b005baa40a40c871a9631be4, type: 3}
   - {fileID: 21300000, guid: ce2100fb97f79764c846da03d85a97d5, type: 3}
-  bg:
-  - {fileID: 21300000, guid: ef2c07afbabf85442b45f61908743394, type: 3}
-  - {fileID: 21300000, guid: eb7f37183c99e6d409a5130f204feb3a, type: 3}
-  - {fileID: 21300000, guid: 08e53549ced69ea49b7205adb1c70cd7, type: 3}
-  - {fileID: 21300000, guid: cd8d8f6fc5f594c4098530defa463239, type: 3}
-  - {fileID: 21300000, guid: 04351f9508ed0da4c8f1a5507bf5c931, type: 3}
   LevelSO: {fileID: 11400000, guid: 3f75c04d4374d2040b08058a2533a017, type: 2}
   virusPos: {x: 0, y: 3.5, z: 0}
   knivesPos: {x: 0, y: -2, z: 0}

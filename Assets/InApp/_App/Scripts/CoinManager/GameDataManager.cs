@@ -11,7 +11,6 @@ public class GameDataManager : PersistentSingleton<GameDataManager>
     [HideInInspector] public PlayerData playerData;
 
     public Sprite[] anh;
-    public Sprite[] bg;
 
     public LevelSO LevelSO;
 
@@ -24,6 +23,8 @@ public class GameDataManager : PersistentSingleton<GameDataManager>
     private LevelData _levelData;
     private int _level;
     private int _remainKnives;
+
+    public int Level => _level;
 
     private void Start()
     {

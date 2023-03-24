@@ -9,7 +9,9 @@ public class LevelSO : ScriptableObject
 
     public LevelData GetLevelData(int level)
     {
-        return levelsData[level - 1];
+        var trueLevel = level % levelsData.Length; 
+        
+        return levelsData[trueLevel];
     }
 }
 

@@ -4,10 +4,9 @@ using UnityEngine;
 public class Constant
 {
     public static string DataKey_PlayerData = "player_data";
-    public static int countSkin = 5;
+    public static int countSkin = 6;
     public static int countBG = 5;
-    public static int priceUnlockSkin = 100;
-    public static int priceUnlockBG = 100;
+    public static int priceUnlockSkin = 20;
 }
 
 public class PlayerData : BaseData
@@ -16,9 +15,7 @@ public class PlayerData : BaseData
     public int highPoint;
     public int point;
     public int currentSkin;
-    public int currentBG;
     public bool[] listSkins;
-    public bool[] listBGs;
 
     public Action<int> onChangeDiamond;
     public Action<int> onChangePoint;
@@ -41,12 +38,10 @@ public class PlayerData : BaseData
         currentSkin = 0;
         highPoint = 0;
         listSkins = new bool[Constant.countSkin];
-        listBGs = new bool[Constant.countBG];
 
         for (int i = 0; i < 1; i++)
         {
             listSkins[i] = true;
-            listBGs[i] = true;
         }
 
         Save();
@@ -78,11 +73,6 @@ public class PlayerData : BaseData
 
     public void UnlockBG(int id)
     {
-        if (!listBGs[id])
-        {
-            listBGs[id] = true;
-        }
-
         Save();
     }
 
@@ -111,7 +101,7 @@ public class PlayerData : BaseData
 
     public bool CheckCanUnlockBG()
     {
-        return intDiamond >= Constant.priceUnlockBG;
+        return true;
     }
 
     public void SubDiamond(int a)
@@ -130,7 +120,6 @@ public class PlayerData : BaseData
 
     public void ChooseBG(int i)
     {
-        currentBG = i;
         Save();
     }
 }

@@ -5,12 +5,10 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-    public TextMeshProUGUI high, scrore;
+    public TextMeshProUGUI high;
 
     void OnEnable()
     {
-        GameDataManager.Instance.playerData.CheckPoint(GameDataManager.Instance.playerData.point);
-        high.SetText($"HIGH SCORE:\n{GameDataManager.Instance.playerData.highPoint}");
-        scrore.SetText($"SCORE:\n{GameDataManager.Instance.playerData.point}");
+        high.SetText($"LEVEL {GameDataManager.Instance.Level}");
     }
 }

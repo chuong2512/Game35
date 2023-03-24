@@ -15,8 +15,36 @@ MonoBehaviour:
   levelsData:
   - knife: {fileID: 8928080086203514706, guid: 9275ac005338e4d409c61470296e7d7d, type: 3}
     speed: 30
-    knivesAmount: 100
-    virus: {fileID: 1281461296325219748, guid: 9af168156cfef1440b63064dfd19d662, type: 3}
+    knivesAmount: 5
+    cycle: {fileID: 1281461296325219748, guid: 9af168156cfef1440b63064dfd19d662, type: 3}
+    cycleScale: 0.35
+    increaseSC: 4
+    cycleSpeed: 3
+  - knife: {fileID: 8928080086203514706, guid: 9275ac005338e4d409c61470296e7d7d, type: 3}
+    speed: 30
+    knivesAmount: 6
+    cycle: {fileID: 1281461296325219748, guid: 9af168156cfef1440b63064dfd19d662, type: 3}
+    cycleScale: 0.35
+    increaseSC: 4
+    cycleSpeed: 3
+  - knife: {fileID: 8928080086203514706, guid: 9275ac005338e4d409c61470296e7d7d, type: 3}
+    speed: 30
+    knivesAmount: 7
+    cycle: {fileID: 1281461296325219748, guid: 9af168156cfef1440b63064dfd19d662, type: 3}
+    cycleScale: 0.35
+    increaseSC: 4
+    cycleSpeed: 3
+  - knife: {fileID: 8928080086203514706, guid: 9275ac005338e4d409c61470296e7d7d, type: 3}
+    speed: 30
+    knivesAmount: 8
+    cycle: {fileID: 1281461296325219748, guid: 9af168156cfef1440b63064dfd19d662, type: 3}
+    cycleScale: 0.35
+    increaseSC: 4
+    cycleSpeed: 3
+  - knife: {fileID: 8928080086203514706, guid: 9275ac005338e4d409c61470296e7d7d, type: 3}
+    speed: 30
+    knivesAmount: 9
+    cycle: {fileID: 1281461296325219748, guid: 9af168156cfef1440b63064dfd19d662, type: 3}
     cycleScale: 0.35
     increaseSC: 4
     cycleSpeed: 3

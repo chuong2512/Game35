@@ -7,35 +7,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public enum State
-{
-    Runing, Stop
-}
 
 public class GameUI : Singleton<GameUI>
 {
-    public Button back;
-    public Button back1;
-    public Button menu;
-
     public GameObject lose;
+    public GameObject win;
 
-    public State currentState = State.Stop;
 
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        back?.onClick.AddListener(ExitGame);
-        back1?.onClick.AddListener(ExitGame);
-        menu?.onClick.AddListener(RestartGame);
-        
-        //SetState(State.Stop);
-    }
-    
-
-    
-    private void ExitGame()
+    public void ExitGame()
     {
         SceneManager.LoadScene("Menu");
     }
@@ -46,17 +25,31 @@ public class GameUI : Singleton<GameUI>
         lose.SetActive(true);
     }
 
+    public void ShowWin()
+    {
+        GameController.Instance.SetState(StateGame.Pause);
+        win.SetActive(true);
+    }
+
     public void RestartGame()
     {
         GameDataManager.Instance.ResetLevel();
         SceneManager.LoadScene("Game");
     }
-    
 
-    //private float duration = 1f;
-
-    /*public void SetState(State state)
+    public void UpLevel()
     {
-        currentState = state;
-    }*/
+        GameDataManager.Instance.NextLevel();
+        SceneManager.LoadScene("Game");
+    }
+
+    public void PlayAgain()
+    {
+        if (GameDataManager.Instance.playerData.intDiamond > 0)
+        {
+            GameDataManager.Instance.playerData.SubDiamond(1);
+        }
+
+        SceneManager.LoadScene("Game");
+    }
 }
