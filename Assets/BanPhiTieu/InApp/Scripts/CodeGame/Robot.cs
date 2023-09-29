@@ -24,6 +24,17 @@ public class Robot : Singleton<Robot>
     }
 
 
+    public void Run()
+    {
+        rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
+    }
+
+    public void EndRun()
+    {
+        rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
+    }
+
+
     [Button]
     public void FrogJump(float power)
     {
@@ -34,20 +45,5 @@ public class Robot : Singleton<Robot>
     void OnCollisionEnter2D(Collision2D collision)
     {
         rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
-    }
-
-    public void Run()
-    {
-        rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
-    }
-
-    public void EndRun()
-    {
-        rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
-    }
-    
-    // Update is called once per frame
-    void Update()
-    {
     }
 }

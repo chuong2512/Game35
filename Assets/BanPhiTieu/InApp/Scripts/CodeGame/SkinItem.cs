@@ -12,11 +12,6 @@ public class SkinItem : MonoBehaviour
     public GameObject chooseObj;
     public Image iconImage;
 
-
-    public void Init(Sprite sprite, bool isLock)
-    {
-    }
-
     public void Choose()
     {
         chooseObj.SetActive(true);
@@ -25,7 +20,7 @@ public class SkinItem : MonoBehaviour
     public void UnChoose()
     {
         chooseObj.SetActive(false);
-        
+
         lockObj.SetActive(!isUnlock);
     }
 

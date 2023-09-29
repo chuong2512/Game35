@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Die : MonoBehaviour
+public class AddPoint : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D col)
     {
-        GameUI.Instance.ShowLose();
+        GameDataManager.Instance.playerData.AddPoint(1);
     }
 }

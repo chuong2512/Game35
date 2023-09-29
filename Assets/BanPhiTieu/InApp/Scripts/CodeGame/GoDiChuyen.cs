@@ -21,8 +21,8 @@ public class GoDiChuyen : Singleton<GoDiChuyen>
         lastPoint += Random.Range(0.8f, 3f);
 
         var col = Instantiate(cols[Random.Range(0, cols.Length)]
-            ,transform);
-        
+            , transform);
+
         col.transform.localPosition = pos + Vector3.right * lastPoint;
     }
 
@@ -33,15 +33,16 @@ public class GoDiChuyen : Singleton<GoDiChuyen>
         {
             GenCol();
         }
-       
-        Robot.Instance.Run();
-        transform.DOMoveX(transform.position.x - x - Add, Mathf.Abs((x+Add) / speed)).SetEase(Ease.Linear).OnComplete(() =>
-        {
-            cau.Reset();
-            Robot.Instance.EndRun();
-            //GameUI.Instance.SetState(State.Stop);
-        });
 
-        cau.transform.DOMoveX(cau.transform.position.x - x - Add, Mathf.Abs((x+Add) / speed)).SetEase(Ease.Linear);
+        Robot.Instance.Run();
+        transform.DOMoveX(transform.position.x - x - Add, Mathf.Abs((x + Add) / speed)).SetEase(Ease.Linear).OnComplete(
+            () =>
+            {
+                cau.Reset();
+                Robot.Instance.EndRun();
+                //GameUI.Instance.SetState(State.Stop);
+            });
+
+        cau.transform.DOMoveX(cau.transform.position.x - x - Add, Mathf.Abs((x + Add) / speed)).SetEase(Ease.Linear);
     }
 }

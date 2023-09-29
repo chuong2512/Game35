@@ -4,7 +4,4 @@ using UnityEngine;
 
 public class EndCollider : MonoBehaviour
 {
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-    }
 }

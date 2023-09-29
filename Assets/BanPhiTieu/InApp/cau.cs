@@ -16,6 +16,15 @@ public class cau : Singleton<cau>
         pos = transform.position;
     }
 
+    public void Reset()
+    {
+        Transform transform1;
+        (transform1 = transform).DOKill();
+        transform1.position = pos;
+        transform1.rotation = Quaternion.identity;
+        SetLine(0, false);
+    }
+
     [Button]
     public void SetLine(float y, bool rotate = false)
     {
@@ -29,17 +38,9 @@ public class cau : Singleton<cau>
         }
     }
 
-    public void Rotate(float y)
+    private void Rotate(float y)
     {
         transform.DORotate(Vector3.back * 90, 1f).SetEase(Ease.Linear)
             .OnComplete(() => { GoDiChuyen.Instance.Move(y); });
-    }
-
-    public void Reset()
-    {
-        transform.DOKill();
-        transform.position = pos;
-        transform.rotation = Quaternion.identity;
-        SetLine(0, false);
     }
 }
